@@ -28,7 +28,15 @@ public class Persona {
 	}
 	
 	public void identificarse() {
+		//forma1 (usar esta)
+		System.out.println(String.format("%s %s", nombre, apellido));
 		
+		//forma2
+		//System.out.println(this.nombre + " " + this.apellido);
+		
+		//forma3
+//		String mensaje = this.nombre + " " + this.apellido;
+//		System.out.println(mensaje);
 	}
 
 }
