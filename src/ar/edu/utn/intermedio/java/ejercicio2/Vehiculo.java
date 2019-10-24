@@ -8,8 +8,13 @@ public class Vehiculo {
 	private Integer cantidadMarchas;
 	private Integer velocidadMaxima;
 	
-	public float velocidadPorMarcha
-		= velocidadMaxima / cantidadMarchas;
+	public float velocidadPorMarcha() {
+		return  velocidadMaxima / cantidadMarchas;
+	}
+	
+	public float velocidadMaximaPorRueda() {
+		return velocidadMaxima / cantidadRuedas;
+	}
 	
 	public Vehiculo(String cantidadRuedas, String color, String marca) {
 		super();
@@ -36,10 +41,6 @@ public class Vehiculo {
 
 	public String getCantidadRuedas() {
 		return cantidadRuedas;
-	}
-	
-	public void setCantidadRuedas(String cantidadRuedas) {
-		this.cantidadRuedas = cantidadRuedas;
 	}
 	
 	public String getColor() {

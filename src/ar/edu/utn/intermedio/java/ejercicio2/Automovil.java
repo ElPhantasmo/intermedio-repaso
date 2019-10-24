@@ -5,5 +5,10 @@ public class Automovil extends Vehiculo {
 	public Automovil(String cantidadRuedas, String color, String marca) {
 		super(cantidadRuedas, color, marca);
 	}
+	
 
+	@Override
+	public Integer getCantidadRuedas() {
+		return 4;
+	}
 }
