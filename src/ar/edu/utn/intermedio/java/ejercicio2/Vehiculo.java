@@ -2,11 +2,20 @@ package ar.edu.utn.intermedio.java.ejercicio2;
 
 public class Vehiculo {
 
-	public String cantidadRuedas;
+	public Integer cantidadRuedas;
 	public String color;
 	public String marca;
 	private Integer cantidadMarchas;
 	private Integer velocidadMaxima;
+	
+	
+	public int avanzar(int cantidadMinutos) {
+		int kmAvanzados = 0;
+		float cantidadHoras = cantidadMinutos / 60;		
+		kmAvanzados = this.getVelocidadMaxima() * (int) cantidadHoras;
+		return kmAvanzados * 1000;
+	}
+	
 	
 	public float velocidadPorMarcha() {
 		return  velocidadMaxima / cantidadMarchas;
@@ -16,13 +25,14 @@ public class Vehiculo {
 		return velocidadMaxima / cantidadRuedas;
 	}
 	
-	public Vehiculo(String cantidadRuedas, String color, String marca) {
+	public Vehiculo(Integer cantidadRuedas, String color, String marca) {
 		super();
 		this.cantidadRuedas = cantidadRuedas;
 		this.color = color;
 		this.marca = marca;
 	}
 	
+
 		public Integer getCantidadMarchas() {
 		return cantidadMarchas;
 	}
@@ -39,8 +49,12 @@ public class Vehiculo {
 		this.velocidadMaxima = velocidadMaxima;
 	}
 
-	public String getCantidadRuedas() {
+	public Integer getCantidadRuedas() {
 		return cantidadRuedas;
+	}
+	
+	public void setCantidadRuedas(Integer cantidadRuedas) {
+		this.cantidadRuedas = cantidadRuedas;
 	}
 	
 	public String getColor() {
@@ -58,8 +72,6 @@ public class Vehiculo {
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
-	
-	
-	
+
 	
 }

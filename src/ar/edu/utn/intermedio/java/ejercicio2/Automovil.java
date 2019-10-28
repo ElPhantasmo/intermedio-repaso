@@ -2,7 +2,7 @@ package ar.edu.utn.intermedio.java.ejercicio2;
 
 public class Automovil extends Vehiculo {
 
-	public Automovil(String cantidadRuedas, String color, String marca) {
+	public Automovil(Integer cantidadRuedas, String color, String marca) {
 		super(cantidadRuedas, color, marca);
 	}
 	
@@ -11,4 +11,5 @@ public class Automovil extends Vehiculo {
 	public Integer getCantidadRuedas() {
 		return 4;
 	}
+
 }
