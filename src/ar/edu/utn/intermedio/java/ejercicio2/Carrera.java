@@ -1,6 +1,7 @@
 package ar.edu.utn.intermedio.java.ejercicio2;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Carrera {
@@ -40,11 +41,23 @@ public class Carrera {
 				minimo = velocidad;
 				maslenta = moto.getMarca();
 		}
-	
-		
 			}
 		
 		System.out.println("Moto mas lenta: " + maslenta);
+		
+		
+		//COMPARADOR VELOCIDADES
+		Collections.sort(listaMotos, new ComparadorVelocidades());
+		for (Moto m : listaMotos) {
+			System.out.println(m.getMarca());
+		}
+		
+		//COMPARADOR ALFABETICO
+		Collections.sort(listaMotos, new CompararAlfabetico());
+		for (Moto m : listaMotos) {
+			System.out.println(m.getMarca());
+		}
+		
 		
 	}
 
